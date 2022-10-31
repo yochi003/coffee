@@ -16,6 +16,35 @@ include 'condb.php';
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.bundle.min.js"></script>
 </head>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#!">coffee Shop</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">หน้าเเรก</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">*</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">ประเภท</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#!">All Products</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="#!">Popular Items</a></li>
+                                <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <button class="btn btn-outline-dark" type="submit">
+                            <class=fa-solid fa-cart-shopping>
+                            ตะกร้า
+                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                        </button>
+                        
+                    </form>
+                </div>
+            </div>
+        </nav>
 <body>
     <div class="container">
         <form id="form1" method="POST" action="insert_cart.php" enctype="multipart/form-data">
@@ -90,7 +119,7 @@ mysqli_close($conn);
 </div>
 <br>
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 mt-2">
         <div class="alert alert-warning" h4 role="alert">
 ข้อมูลสำหรับจัดส่ง 
             </div>
@@ -103,6 +132,12 @@ mysqli_close($conn);
             อัปโหลดหลักฐานชำระเงิน
             <input type="file" name="slip" class="form-control" required placeholder="อัปโหลดหลักฐานชำระเงิน"> <br>
             <br><br><br>
+        </div>
+        <div class="col-md-4 mt-2">
+        <div class="alert alert-info text-center" h4 role="alert">แสกน Qrcode เพื่อชำระเงิน
+            <div class="card" style="width: 18rem;">
+                <img src="image/slip.jpg">
+            </div>
         </div>
     </div>
 </form>
