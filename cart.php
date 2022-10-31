@@ -18,7 +18,7 @@ include 'condb.php';
 </head>
 <body>
     <div class="container">
-        <form id="form1" method="POST" action="insert_cart.php">
+        <form id="form1" method="POST" action="insert_cart.php" enctype="multipart/form-data">
     <div class = "row">
         <div class ="col-md-10">
 <div class="alert alert-success h4" role="alert">
@@ -33,6 +33,7 @@ include 'condb.php';
             <th>ราคารวม</th>
             <th>เพิ่ม - ลด</th>
             <th>ลบ</th>
+            
         </tr>
 <?php
 // echo "NOOOOOOOOOOO!!!!!"; 
@@ -54,7 +55,7 @@ for ($i=0; $i <= (int)$_SESSION["intLine"]; $i++){
         <tr>
             <td><?=$m?></td>
             <td>
-                <img src="admin/image/<?=$row_pro['image']?>" width="100" height="80" class="border">
+                <img src="admin/image/<?=$row_pro['image']?>" width="100" height="150   " class="border">
                 <?=$row_pro['pro_name']?>
             </td>
             <td><?=$row_pro['price']?></td>
@@ -84,7 +85,7 @@ mysqli_close($conn);
 </table>
 <div style="text-align:right">
 <a href ="show_product.php"><button type="button" class="btn btn-outline-danger">เลือกสินค้า</button> </a>
-<button type="submit" class="btn btn-outline-success">ยืนยันการสั่งซื้อ</button>
+
 </div>
 </div>
 <br>
@@ -99,10 +100,13 @@ mysqli_close($conn);
            <textarea class="form-control" required placeholder="ที่อยู่" name="cus_add" row="3"></textarea> <br>
             เบอร์โทรศัพท์
             <input type="number" name="cus_tel" class="form-control" required placeholder="เบอร์โทรศัพท์"> <br>
+            อัปโหลดหลักฐานชำระเงิน
+            <input type="file" name="slip" class="form-control" required placeholder="อัปโหลดหลักฐานชำระเงิน"> <br>
             <br><br><br>
         </div>
     </div>
 </form>
+<button type="submit" class="btn btn-outline-success">ยืนยันการสั่งซื้อ</button>
 </div>
 </body>
 </html>

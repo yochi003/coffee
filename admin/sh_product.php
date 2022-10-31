@@ -56,7 +56,7 @@ while($row=mysqli_fetch_array($hand)){
             <td><?=$row['amount']?></td>
             <td><image src="image/<?=$row['image']?>" width="100px" height="150px"></td>
             <td><a href="edit_product.php?id=<?=$row['pro_id']?>" class="btn btn-success"> แก้ไข</a></td>
-            <td><a href="#?id=<?=$row['pro_id']?>" class="btn btn-danger">ลบ</a></td>
+            <td><a href="delete_product.php?id=<?=$row['pro_id']?>" class="btn btn-danger">ลบ</a></td>
            </tr>
            <?php
            }

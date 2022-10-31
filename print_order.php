@@ -28,7 +28,11 @@ $total_price = $rs['total_price'];
 เลขที่การสั่งซื้อ : <?=$rs['orderID']?> <br>
 ชื่อ - นามสกุล (ลูกค้า): <?=$rs['cus_name']?> <br>
 ที่อยู่จัดส่ง : <?=$rs['address']?> <br>
-เบอร์โทรศัพท์ : <?=$rs['telephone']?> <br>
+เบอร์โทรศัพท์ : <?=$rs['telephone']?> <br><br>
+หลักฐานชำระเงิน : <br>
+<!-- <?php echo '<miage src = "slip/'.$rs['slip'].'" width="100px;" height="100px;" alt="Image">'?> -->
+<img src="./slip/<?=$rs['slip']?>" width="200px" height="250"  class="border"> <br>
+
 <br>
 <div class="card mb-4 mt-4"> 
   <div class="card-body"> 

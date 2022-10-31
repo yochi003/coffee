@@ -39,6 +39,8 @@ $ids=$_GET['id'];
 
                             <div class="card-body">
                                 <h5>เลขที่ใบสั่งซื้อ : <?=$ids?></h5>
+                                หลักฐานชำระเงิน : 
+                            <img src="admin/slip/<?=$row_pro["slip"]?>" width="200px" height="250"  class="border"> <br>
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
@@ -58,6 +60,7 @@ $ids=$_GET['id'];
           $sum_total=0;
           while($row=mysqli_fetch_array($result)){
             $sum_total=$row['total_price'];
+            
           ?> 
                                     
                                         <tr>
@@ -74,7 +77,9 @@ $ids=$_GET['id'];
                                     ?>
 
                                 </table>
+                                
                                 <b>ราคารวมสุทธิ <?=number_format($sum_total,2)?> บาท</b>
+                                
                             </div>
                         </div>
                     </div>

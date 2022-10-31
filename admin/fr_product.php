@@ -56,7 +56,7 @@ include 'condb.php';
                 <label> จำนวน </label>
                 <input type="number" name="num" class="form-control"required> <br>
                 <label> รูปภาพ </label>
-                <input type="file" name="file1" required> <br> <br>
+                <input type="file" name="file1" class="form-control" required> <br> <br>
 
                 <button type="submit" class="btn btn-success">บันทึก</button>
                 <a class="btn btn-danger" href="index.php" role="button">ยกเลิก</a>
