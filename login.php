@@ -29,7 +29,7 @@
         <form class="needs-validation" action="login_check.php" method="POST">
             <div class="form-group was-validated">
                 <label class="form-label text-success" for="name">Username</label>
-                <input class="form-control" type="type" name="ctm_name" required>
+                <input class="form-control" type="type" name="ctm_user" required>
                 <div class="invalid-feedback">
                     โปรดกรอกชื่อผู้ใช้
                 </div>

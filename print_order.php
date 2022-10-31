@@ -17,6 +17,35 @@ $total_price = $rs['total_price'];
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.bundle.min.js"></script>
 </head>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#!">coffee Shop</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">หน้าเเรก</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">*</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">อื่นๆ</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#!">All Products</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="#!">โปรไฟล์</a></li>
+                                <li><a class="dropdown-item" href="#!">ออกจากระบบ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <button class="btn btn-outline-dark" type="submit">
+                            <i class="fa-solid fa-cart-shopping">
+                            การสั่งซื้อเสร็จสมบูรณ์
+                            <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
+                        </button>
+                        
+                    </form>
+                </div>
+            </div>
+        </nav>
 <body>
 <div class="container">
   <div class="row">
@@ -76,7 +105,6 @@ while($row=mysqli_fetch_array($result1)){
 <br></br>
 <div class="text-center">
 <a href="show_product.php" class="btn btn-success">หน้าเเรก</a>
-<a href="payment_add.php" class="btn btn-danger">ชำระเงิน</a>   
 <button onclick="window.print()" class="btn btn-warning">ใบเสร็จ</button>  
   
 </div>
