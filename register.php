@@ -42,6 +42,15 @@
                 </div>
             </div>
             <div class="form-group was-validated">
+                        <label class="form-label text-success">รหัสผ่าน</label>
+                        <input class="form-control" type="password" name="ctm_password" id="myPassword" required>
+                        <div class="invalid-feedback">
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" onclick="passShow()">
+                            <label>แสดงรหัสผ่าน</label>
+                        </div>
+            <div class="form-group was-validated">
                 <label class="form-label text-success">อีเมล</label>
                 <input class="form-control" type="email" name="ctm_email" required>
                 <div class="invalid-feedback">
@@ -62,16 +71,8 @@
                     </div>
 
 
-                    <div class="form-group was-validated">
-                        <label class="form-label text-success">รหัสผ่าน</label>
-                        <input class="form-control" type="password" name="ctm_password" id="myPassword" required>
-                        <div class="invalid-feedback">
-
-                        </div>
-                        <div class="form-group">
-                            <input type="checkbox" onclick="passShow()">
-                            <label>แสดงรหัสผ่าน</label>
-                        </div>
+                
+                        
                         <input class="btn btn-danger w-100" type="submit" value="สมัครสมาชิก">
                         <div class="mt-2">
                             <a href="login.php" class="btn btn-primary w-100">เข้าสู่ระบบ</a>

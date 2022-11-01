@@ -40,7 +40,7 @@ $ids=$_GET['id'];
                             <div class="card-body">
                                 <h5>เลขที่ใบสั่งซื้อ : <?=$ids?></h5>
                                 หลักฐานชำระเงิน : 
-                            <img src="admin/slip/<?=$row_pro["slip"]?>" width="200px" height="250"  class="border"> <br>
+                            <img src="../slip/<?=$row_pro["slip"]?>" width="200px" height="250"  class="border"> <br>
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>

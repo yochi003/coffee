@@ -1,10 +1,6 @@
 <?php 
 session_start();
 include 'condb.php';
-// $id=$_GET["id"];
-// $sql ="SELECT * FROM product WHERE pro_id ='$id' ";
-// $result = mysqli_query($conn, $sql);
-// $row = mysqli_fetch_array($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,6 +65,10 @@ include 'condb.php';
 $Total = 0;
 $sumPrice = 0;
 $m = 1;
+$sumTotal=0;
+
+if(isset($_SESSION["intLine"])) {   //ถ้าว่างให้ทำงานใน {}
+
 for ($i=0; $i <= (int)$_SESSION["intLine"]; $i++){ 
     if(($_SESSION["strProductID"][$i]) != ""){
         $sql="select * from product where pro_id ='" . $_SESSION["strProductID"][$i] . "' " ;
@@ -79,7 +79,8 @@ for ($i=0; $i <= (int)$_SESSION["intLine"]; $i++){
         $Total = $_SESSION["strQty"][$i];
         $sum = $Total * $row_pro['price'];
         $sumPrice = (float) $sumPrice + $sum;
-        $_SESSION["sum_price"] = $sumPrice;      
+        $_SESSION["sum_price"] = $sumPrice;
+        $sumTotal=$sumTotal+ $Total;      
 ?>
         <tr>
             <td><?=$m?></td>
@@ -104,6 +105,7 @@ for ($i=0; $i <= (int)$_SESSION["intLine"]; $i++){
  $m=$m+1;
 }
 }
+} 
 mysqli_close($conn);
 ?>
 <tr>
@@ -112,6 +114,7 @@ mysqli_close($conn);
     <td>บาท</td>
 </tr>
 </table>
+<p class="text-end">จำนวนสินค้าที่สั่งซื้อ <?= $sumTotal?> แก้ว</p>
 <div style="text-align:right">
 <a href ="show_product.php"><button type="button" class="btn btn-outline-danger">เลือกสินค้า</button> </a>
 
